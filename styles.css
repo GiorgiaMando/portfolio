@@ -3,11 +3,16 @@
    ========================================================================== */
 :root {
     /* Colors - Digital Blueprint */
-    --bg-color: #080808;      /* Obsidian Black */
-    --text-primary: #FFFFFF;  /* Pure White */
-    --text-body: #A0A0A0;     /* Silver Mist */
-    --accent: #0057FF;        /* Digital Blue */
-    --border-color: #1A1A1A;  /* Dark Slate */
+    --bg-color: #080808;
+    /* Obsidian Black */
+    --text-primary: #FFFFFF;
+    /* Pure White */
+    --text-body: #A0A0A0;
+    /* Silver Mist */
+    --accent: #0057FF;
+    /* Digital Blue */
+    --border-color: #1A1A1A;
+    /* Dark Slate */
 
     /* Typography */
     --font-primary: 'Space Grotesk', sans-serif;
@@ -24,7 +29,8 @@
     --space-16: 128px;
 
     /* UI Logic */
-    --border-radius: 4px; /* Quasi netti per look tecnico */
+    --border-radius: 4px;
+    /* Quasi netti per look tecnico */
     --border-width: 1px;
     --transition-curve: cubic-bezier(0.4, 0, 0.2, 1);
     --transition-duration: 0.4s;
@@ -54,7 +60,10 @@ body {
 }
 
 /* Typography Hierarchy */
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
     font-family: var(--font-primary);
     color: var(--text-primary);
     font-weight: 700;
@@ -62,9 +71,19 @@ h1, h2, h3, .logo {
     line-height: 1.2;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; }
-h3 { font-size: 1.5rem; font-weight: 500; }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
 a {
     color: var(--text-primary);
@@ -76,10 +95,24 @@ a:hover {
     color: var(--accent);
 }
 
-.accent { color: var(--accent); }
-.body-text { font-size: 1.125rem; margin-bottom: var(--space-3); }
-.light-text { font-weight: 300; }
-.meta { font-size: 0.875rem; color: var(--text-body); font-family: var(--font-secondary); }
+.accent {
+    color: var(--accent);
+}
+
+.body-text {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-3);
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.meta {
+    font-size: 0.875rem;
+    color: var(--text-body);
+    font-family: var(--font-secondary);
+}
 
 /* ==========================================================================
    Layout System (12-Column Grid)
@@ -127,10 +160,20 @@ a:hover {
     align-items: center;
 }
 
-.logo { font-size: 1.25rem; }
+.logo {
+    font-size: 1.25rem;
+}
 
-.nav-links { display: flex; gap: var(--space-4); }
-.nav-links a { font-family: var(--font-primary); font-size: 0.875rem; font-weight: 500;}
+.nav-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.nav-links a {
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
 
 /* Hero */
 .hero {
@@ -138,15 +181,19 @@ a:hover {
     display: flex;
     align-items: center;
     border-bottom: var(--border-width) solid var(--border-color);
-    padding-top: calc(var(--space-16) + 60px); /* Offset per navbar */
+    padding-top: calc(var(--space-16) + 60px);
+    /* Offset per navbar */
 }
 
 .hero-content {
-    grid-column: 1 / -1; /* Mobile: full width */
+    grid-column: 1 / -1;
+    /* Mobile: full width */
 }
 
 @media (min-width: 768px) {
-    .hero-content { grid-column: 1 / 11; }
+    .hero-content {
+        grid-column: 1 / 11;
+    }
 }
 
 .subtitle {
@@ -159,7 +206,9 @@ a:hover {
 }
 
 /* Bio Section */
-.bio-section { border-bottom: var(--border-width) solid var(--border-color); }
+.bio-section {
+    border-bottom: var(--border-width) solid var(--border-color);
+}
 
 .section-title {
     grid-column: 1 / -1;
@@ -171,14 +220,24 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .section-title { grid-column: 1 / 4; margin-bottom: 0; }
-    .bio-content { grid-column: 5 / 12; }
+    .section-title {
+        grid-column: 1 / 4;
+        margin-bottom: 0;
+    }
+
+    .bio-content {
+        grid-column: 5 / 12;
+    }
 }
 
 /* Bento Grid */
-.projects-section { border-bottom: var(--border-width) solid var(--border-color); }
+.projects-section {
+    border-bottom: var(--border-width) solid var(--border-color);
+}
 
-.full-width { grid-column: 1 / -1; }
+.full-width {
+    grid-column: 1 / -1;
+}
 
 .bento-grid {
     display: grid;
@@ -192,10 +251,19 @@ a:hover {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: 250px;
     }
-    
-    .box-large { grid-column: span 2; grid-row: span 2; }
-    .box-medium { grid-column: span 2; }
-    .box-small { grid-column: span 1; }
+
+    .box-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .box-medium {
+        grid-column: span 2;
+    }
+
+    .box-small {
+        grid-column: span 1;
+    }
 }
 
 .bento-item {
@@ -211,21 +279,68 @@ a:hover {
     transition: border-color var(--transition-duration) var(--transition-curve);
 }
 
-.bento-item:hover { border-color: var(--accent); }
+.bento-item:hover {
+    border-color: var(--accent);
+}
+
+/* Image Placeholder System */
+.has-image-placeholder {
+    /* Per permettere alla image-layer di posizionarsi sul retro */
+    z-index: 1;
+}
+
+.image-layer {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 0.95) 80%),
+        repeating-linear-gradient(45deg, #0d0d0d, #0d0d0d 10px, #121212 10px, #121212 20px);
+    opacity: 0.6;
+    transition: opacity var(--transition-duration) var(--transition-curve),
+        transform calc(var(--transition-duration)*2) var(--transition-curve);
+}
+
+.bento-item:hover .image-layer {
+    opacity: 0.3;
+    transform: scale(1.05);
+}
+
+/* Typography tweaks for inner content */
+.project-info {
+    position: relative;
+    z-index: 2;
+}
+
+.project-excerpt {
+    font-size: 0.875rem;
+    color: var(--text-body);
+    font-weight: 300;
+    margin-top: var(--space-2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: 0.8;
+}
 
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 87, 255, 0.05); /* Slight blue tint on hover */
+    background: rgba(0, 87, 255, 0.05);
+    /* Slight blue tint on hover */
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity var(--transition-duration) var(--transition-curve);
     backdrop-filter: blur(4px);
+    z-index: 3;
 }
 
-.bento-item:hover .project-overlay { opacity: 1; }
+.bento-item:hover .project-overlay {
+    opacity: 1;
+}
 
 .btn-primary {
     display: inline-block;
@@ -237,11 +352,17 @@ a:hover {
     border-radius: var(--border-radius);
     transform: translateY(10px);
     transition: transform var(--transition-duration) var(--transition-curve),
-                background-color var(--transition-duration) var(--transition-curve);
+        background-color var(--transition-duration) var(--transition-curve);
 }
 
-.bento-item:hover .btn-primary { transform: translateY(0); }
-.btn-primary:hover { background-color: #0046CC; color: var(--text-primary); }
+.bento-item:hover .btn-primary {
+    transform: translateY(0);
+}
+
+.btn-primary:hover {
+    background-color: #0046CC;
+    color: var(--text-primary);
+}
 
 /* Footer */
 .footer-content {
@@ -266,9 +387,22 @@ a:hover {
     border-bottom-color: var(--accent);
 }
 
-.social-links { display: flex; gap: var(--space-4); }
-.social-links a { font-family: var(--font-primary); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 0.05em; }
-.copyright { font-size: 0.875rem; margin-top: var(--space-8); }
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+}
+
+.social-links a {
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    margin-top: var(--space-8);
+}
 
 /* ==========================================================================
    Animations (Intersection Observer targets)
@@ -277,7 +411,7 @@ a:hover {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s var(--transition-curve),
-                transform 0.8s var(--transition-curve);
+        transform 0.8s var(--transition-curve);
 }
 
 .fade-in-up.is-visible {
@@ -285,5 +419,10 @@ a:hover {
     transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
