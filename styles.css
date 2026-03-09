@@ -166,15 +166,19 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: var(--space-4);
+    gap: var(--space-3);
+    /* Reduced gap on mobile */
     align-items: center;
     flex-wrap: wrap;
+    /* Allows wrapping */
     justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
     .nav-links {
         gap: var(--space-6);
+        flex-wrap: nowrap;
+        /* Prevent wrapping on desktop */
     }
 }
 
@@ -197,12 +201,20 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: 0.5rem;
+    margin-left: 0;
+    width: 100%;
+    /* Force to new line on mobile */
+    justify-content: flex-end;
+    /* Align right */
+    margin-top: 0.25rem;
 }
 
 @media (min-width: 768px) {
     .lang-switch {
         margin-left: 1rem;
+        margin-top: 0;
+        width: auto;
+        /* Inline on desktop */
     }
 }
 
