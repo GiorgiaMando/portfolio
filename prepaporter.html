@@ -62,9 +62,14 @@
         <div class="nav-content">
             <div class="logo">Giorgia Mandorino</div>
             <div class="nav-links">
-                <a href="index.html#bio">Bio</a>
-                <a href="index.html#projects">Work</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+                <a href="index.html#projects" data-i18n="nav_work">Work</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button id="lang-it" class="lang-btn active">IT</button>
+                    <span class="lang-sep">|</span>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,9 +78,10 @@
     <main class="container">
 
         <header class="project-header fade-in-up delay-2">
-            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
-            <h1>Prep-à-Porter</h1>
-            <p class="subtitle" style="margin-top: var(--space-2);">Prototipo di applicazione mobile</p>
+            <a href="index.html#projects" class="back-link" data-i18n="back_to_projects">← Torna ai progetti</a>
+            <h1 data-i18n="prep_title">Prep-à-Porter</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);" data-i18n="prep_meta_mobile">Prototipo di
+                applicazione mobile</p>
         </header>
 
         <div class="fade-in-up">
@@ -83,16 +89,16 @@
         </div>
 
         <section class="project-content-area fade-in-up delay-1">
-            <h2>Il Progetto</h2>
-            <p class="body-text" style="margin-bottom: var(--space-6);">
+            <h2 data-i18n="prep_project_h2">Il Progetto</h2>
+            <p class="body-text" style="margin-bottom: var(--space-6);" data-i18n="prep_project_p">
                 Quest'interfaccia è stata realizzata per l'esame di ergonomia cognitiva. Il brief prevedeva di
                 progettare un'applicazione che risolvesse un problema degli studenti. Il nostro obiettivo è stato quello
                 di costruire un'app che potesse aiutare studenti e giovani lavoratori con la gestione dei pasti
                 d'asporto, evitando quindi disorganizzazione che porta a sprechi e perdite di tempo.
             </p>
 
-            <h2>Il mio contributo</h2>
-            <p class="body-text">
+            <h2 data-i18n="prep_contrib_h2">Il mio contributo</h2>
+            <p class="body-text" data-i18n="prep_contrib_p">
                 In questo progetto il mio contributo è stato utile in diverse fasi del lavoro. Inizialmente ho
                 contribuito alla realizzazione di interviste utili alla comprensione dei reali bisogni del target,
                 successivamente ho progettato l'applicazione su Figma partendo da wireframe low-fidelity fino ad
@@ -121,45 +127,50 @@
                 <img src="assets/images/ricette15.jpg" alt="Schermata Ricette 15">
             </div>
 
-            <!-- Sezione Testo Segnaposto -->
-            <div class="project-content-area" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
-                <h2>Approfondimenti UX/UI</h2>
+            <!-- Approfondimento UX/UI -->
+            <section class="project-content-area fade-in-up section-spacing">
+                <h2 data-i18n="prep_ux_h2">Approfondimenti UX/UI</h2>
                 <p class="body-text">
-                    Vi presento una seconda versione dell'applicazione, scartata nelle prime fasi di prototipazione in
-                    quanto non utilizzabile durante la fase di test. In questo caso, la fase di testing del prototipo è
-                    stata svolta stampando su carta le varie schermate e i colori di questa versione del prototipo non
-                    ci garantivano la corretta visualizzazione della stampa, per cui, per rispettare le norme WCAG,
-                    si è deciso di utilizzare i colori e il design presente nella versione del prototipo definitiva,
-                    presentata all'inizio.
+                    <span data-i18n="prep_ux_p">Vi presento una seconda versione dell'applicazione, scartata nelle prime
+                        fasi di prototipazione in quanto non utilizzabile durante la fase di test. In questo caso, la
+                        fase di testing del prototipo è stata svolta stampando su carta le varie schermate e i colori di
+                        questa versione del prototipo non ci garantivano la corretta visualizzazione della stampa, per
+                        cui, per rispettare le norme WCAG, si è deciso di utilizzare i colori e il design presente nella
+                        versione del prototipo definitiva, presentata all'inizio.</span>
                 </p>
-            </div>
+            </section>
 
-            <!-- Sezione Gallery Orizzontale Secondaria -->
-            <div class="horizontal-scroll-container">
-                <img src="assets/images/ricetteno1.jpg" alt="Schermata Alternativa 1">
-                <img src="assets/images/ricetteno2.jpg" alt="Schermata Alternativa 2">
-                <img src="assets/images/ricetteno3.png" alt="Schermata Alternativa 3">
-                <img src="assets/images/ricetteno4.jpg" alt="Schermata Alternativa 4">
-                <img src="assets/images/ricetteno5.jpg" alt="Schermata Alternativa 5">
-                <img src="assets/images/ricetteno6.jpg" alt="Schermata Alternativa 6">
-                <img src="assets/images/ricetteno7.jpg" alt="Schermata Alternativa 7">
-                <img src="assets/images/ricetteno8.jpg" alt="Schermata Alternativa 8">
-                <img src="assets/images/ricetteno9.jpg" alt="Schermata Alternativa 9">
-            </div>
+            <!-- Seconda Gallery -->
+            <section class="fade-in-up">
+                <div class="horizontal-scroll-container">
+                    <img src="assets/images/ricetteno1.jpg" alt="Schermata Ricette Extra 1">
+                    <img src="assets/images/ricetteno2.jpg" alt="Schermata Ricette Extra 2">
+                    <img src="assets/images/ricetteno3.png" alt="Schermata Ricette Extra 3">
+                    <img src="assets/images/ricetteno4.jpg" alt="Schermata Ricette Extra 4">
+                    <img src="assets/images/ricetteno5.jpg" alt="Schermata Ricette Extra 5">
+                    <img src="assets/images/ricetteno6.jpg" alt="Schermata Ricette Extra 6">
+                    <img src="assets/images/ricetteno7.jpg" alt="Schermata Ricette Extra 7">
+                    <img src="assets/images/ricetteno8.jpg" alt="Schermata Ricette Extra 8">
+                    <img src="assets/images/ricetteno9.jpg" alt="Schermata Ricette Extra 9">
+
+                </div>
+            </section>
         </section>
 
     </main>
 
-    <!-- Contact & Footer -->
-    <footer id="contact" class="footer section-spacing fade-in-up">
+    <!-- Footer -->
+    <footer class="footer section-spacing">
         <div class="container grid-12">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            <div class="footer-content" style="grid-column: 1 / -1; text-align: center; border-top: none;">
+                <p class="copyright" data-i18n="footer_copy">© 2026 Giorgia Mandorino. Engineered with passion.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="lang.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

@@ -23,9 +23,14 @@
         <div class="nav-content">
             <div class="logo">Giorgia Mandorino</div>
             <div class="nav-links">
-                <a href="#bio">Bio</a>
-                <a href="#projects">Work</a>
-                <a href="#contact">Contact</a>
+                <a href="#bio" data-i18n="nav_bio">Bio</a>
+                <a href="#projects" data-i18n="nav_work">Work</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button id="lang-it" class="lang-btn active">IT</button>
+                    <span class="lang-sep">|</span>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -39,9 +44,9 @@
         <div class="container grid-12 relative-z">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1><span class="accent">Web Designer <br> & Front-End Developer</span></h1>
-                    <p class="subtitle">UX Research · Figma · Javascript · React.js · Antigravity · CSS · Bootstrap ·
-                        HTML · Usability Test · A/B Test</p>
+                    <h1 data-i18n="hero_title"><span class="accent">Web Designer <br> & Front-End Developer</span></h1>
+                    <p class="subtitle" data-i18n="hero_subtitle">UX Research · Figma · Javascript · React.js ·
+                        Antigravity · CSS · Bootstrap · HTML · Usability Test · A/B Test</p>
                 </div>
             </div>
         </div>
@@ -51,19 +56,19 @@
     <section id="bio" class="bio-section section-spacing fade-in-up">
         <div class="container grid-12">
             <div class="section-title">
-                <h2>01. Identity</h2>
+                <h2 data-i18n="bio_title">01. Identity</h2>
             </div>
             <div class="bio-content">
-                <p class="body-text">
+                <p class="body-text" data-i18n="bio_p1">
                     Mi chiamo Giorgia e ho 25 anni, ho appena concluso la laurea magistrale in Teoria e Tecnologia della
                     Comunicazione, dove ho approfondito il mondo digitale, con un focus particolare sul Web Design e il
                     Front-End Development, integrando competenze teoriche e tecniche.
                 </p>
-                <p class="body-text">
+                <p class="body-text" data-i18n="bio_p2">
                     Anche dopo la conclusione degli studi, continuo a formarmi e ad aggiornarmi costantemente, spinta
                     dalla curiosità e dal voler rafforzare le mie competenze.
                 </p>
-                <p class="body-text">
+                <p class="body-text" data-i18n="bio_p3">
                     Mi muovo tra comunicazione, design e tecnologia con uno sguardo attento all’esperienza delle
                     persone. Sono curiosa, creativa e orientata alla crescita continua. L’interesse per l’arte e il
                     design guida il mio modo di osservare e progettare, mentre l’attenzione ai dettagli mi porta a
@@ -77,7 +82,7 @@
     <section id="projects" class="projects-section section-spacing fade-in-up">
         <div class="container grid-12">
             <div class="section-title full-width">
-                <h2>02. Selected Works</h2>
+                <h2 data-i18n="projects_title">02. Selected Works</h2>
             </div>
 
             <div class="bento-grid full-width">
@@ -87,78 +92,84 @@
                         <img src="assets/images/SAM.jpg" alt="SAM project" class="project-image">
                     </div>
                     <div class="project-info">
-                        <h3>Qualità dell'interazione e soddisfazione dell'utente negli agenti conversazionali: il caso
+                        <h3 data-i18n="sam_title">Qualità dell'interazione e soddisfazione dell'utente negli agenti
+                            conversazionali: il caso
                             studio dell'agente SAM presso STEP FuturAbility District</h3>
                         <p class="meta">UX Research · 2026</p>
                         <!-- Spazio per un piccolo testo esplicativo futuro -->
-                        <p class="project-excerpt">Analisi qualitativa delle performance di questo agente AI con
+                        <p class="project-excerpt" data-i18n="sam_excerpt">Analisi qualitativa delle performance di
+                            questo agente AI con
                             successiva analisi correlazionale rispetto al CSAT.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="sam.html" class="btn-primary">Vedi caso studio</a>
+                        <a href="sam.html" class="btn-primary" data-i18n="btn_case_study">Vedi caso studio</a>
                     </div>
                 </article>
 
-                <!-- Project 2 (Small) - Posizionato qui per incastrarsi nella griglia a fianco del box-large -->
+                <!-- Project 2 (Small) -->
                 <article class="bento-item box-small has-image-placeholder">
                     <div class="image-layer">
                         <img src="assets/images/prepaporter.jpg" alt="Prep-à-Porter project" class="project-image">
                     </div>
                     <div class="project-info">
-                        <h3>Prep-à-Porter</h3>
-                        <p class="meta">Prototipo di applicazione · 2025</p>
-                        <p class="project-excerpt">Applicazione mobile utile a studenti e lavoratori per
+                        <h3 data-i18n="prep_title">Prep-à-Porter</h3>
+                        <p class="meta" data-i18n="prep_meta">Prototipo di applicazione · 2025</p>
+                        <p class="project-excerpt" data-i18n="prep_excerpt">Applicazione mobile utile a studenti e
+                            lavoratori per
                             organizzare pasti e spesa in modo semplice ed efficace.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="prepaporter.html" class="btn-primary">esplora documenti</a>
+                        <a href="prepaporter.html" class="btn-primary" data-i18n="btn_explore">esplora documenti</a>
                     </div>
                 </article>
 
-                <!-- Project 3 (Small) - Si incastra sotto il primo small, sempre a fianco del large -->
+                <!-- Project 3 (Small) -->
                 <article class="bento-item box-small has-image-placeholder">
                     <div class="image-layer">
                         <img src="assets/images/terrac137.jpg" alt="Terra C-137 project" class="project-image">
                     </div>
                     <div class="project-info">
-                        <h3>Terra C-137</h3>
-                        <p class="meta">Progettazione di interfaccia · 2025</p>
-                        <p class="project-excerpt">Web app di un totem turistico relativo ad una terra immaginaria.</p>
+                        <h3 data-i18n="terra_title">Terra C-137</h3>
+                        <p class="meta" data-i18n="terra_meta">Progettazione di interfaccia · 2025</p>
+                        <p class="project-excerpt" data-i18n="terra_excerpt">Web app di un totem turistico relativo ad
+                            una terra immaginaria.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="terrac137.html" class="btn-primary">esplora documenti</a>
+                        <a href="terrac137.html" class="btn-primary" data-i18n="btn_explore">esplora documenti</a>
                     </div>
                 </article>
 
-                <!-- Project 4 (Medium) - Nuova riga, occupa 2 colonne -->
+                <!-- Project 4 (Medium) -->
                 <article class="bento-item box-medium has-image-placeholder">
                     <div class="image-layer">
                         <img src="assets/images/antitruffapp.jpg" alt="AntiTruffApp project" class="project-image">
                     </div>
                     <div class="project-info">
-                        <h3>AntiTruffApp</h3>
-                        <p class="meta">Prototipo di applicazione · 2025</p>
-                        <p class="project-excerpt">Prototipo di applicazione educativa per aiutare le persone anziane a
+                        <h3 data-i18n="anti_title">AntiTruffApp</h3>
+                        <p class="meta" data-i18n="anti_meta">Prototipo di applicazione · 2025</p>
+                        <p class="project-excerpt" data-i18n="anti_excerpt">Prototipo di applicazione educativa per
+                            aiutare le persone anziane a
                             riconoscere truffe e frodi online, promuovendo autonomia e sicurezza digitale.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="antitruffapp.html" class="btn-primary">esplora documenti</a>
+                        <a href="antitruffapp.html" class="btn-primary" data-i18n="btn_explore">esplora documenti</a>
                     </div>
                 </article>
 
-                <!-- Project 5 (Small) - Si incastra affianco al medium nell'ultima riga -->
+                <!-- Project 5 (Small) -->
                 <article class="bento-item box-small has-image-placeholder">
                     <div class="image-layer">
                         <img src="assets/images/varmblixt.jpg" alt="Varmblixt project" class="project-image">
                     </div>
                     <div class="project-info">
-                        <h3>Varmblixt</h3>
-                        <p class="meta">Progettazione di un interfaccia · 2024</p>
-                        <p class="project-excerpt">Realizzazione di un sito web con Wordpress per promuovere un prodotto
+                        <h3 data-i18n="varm_title">Varmblixt</h3>
+                        <p class="meta" data-i18n="varm_meta">Progettazione di un interfaccia · 2024</p>
+                        <p class="project-excerpt" data-i18n="varm_excerpt">Realizzazione di un sito web con Wordpress
+                            per promuovere un prodotto
                             a scelta dal catalogo Ikea.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="varmblixt.html" class="btn-primary">esplora documenti</a>
+                        <a href="varmblixt.html" class="btn-primary" data-i18n="btn_explore">esplora documenti</a>
                     </div>
                 </article>
             </div>
@@ -193,12 +204,14 @@
                         </svg>
                     </a>
                 </div>
-                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+                <p class="copyright" data-i18n="footer_copy">© 2026 Giorgia Mandorino. Engineered with passion.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="lang.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

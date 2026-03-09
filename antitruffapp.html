@@ -62,9 +62,14 @@
         <div class="nav-content">
             <div class="logo">Giorgia Mandorino</div>
             <div class="nav-links">
-                <a href="index.html#bio">Bio</a>
-                <a href="index.html#projects">Work</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+                <a href="index.html#projects" data-i18n="nav_work">Work</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button id="lang-it" class="lang-btn active">IT</button>
+                    <span class="lang-sep">|</span>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,9 +78,10 @@
     <main class="container">
 
         <header class="project-header fade-in-up delay-2">
-            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
-            <h1>AntiTruffApp</h1>
-            <p class="subtitle" style="margin-top: var(--space-2);">Prototipo di applicazione educativa per anziani</p>
+            <a href="index.html#projects" class="back-link" data-i18n="back_to_projects">← Torna ai progetti</a>
+            <h1 data-i18n="anti_title">AntiTruffApp</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);" data-i18n="anti_meta_edu">Prototipo di applicazione
+                educativa per anziani</p>
         </header>
 
         <div class="fade-in-up">
@@ -83,14 +89,14 @@
         </div>
 
         <section class="project-content-area fade-in-up delay-1">
-            <h2>Descrizione</h2>
-            <p class="body-text">
+            <h2 data-i18n="anti_desc_h2">Descrizione</h2>
+            <p class="body-text" data-i18n="anti_desc_p1">
                 In questo progetto di interaction design il brief prevedeva la progettazione di un’applicazione rivolta
                 a un pubblico over 60. La soluzione sviluppata è un’app educativa pensata per aiutare le fasce di
                 popolazione più vulnerabili a riconoscere ed evitare le truffe online, con contenuti informativi e
                 strumenti di supporto alla prevenzione.
             </p>
-            <p class="body-text">
+            <p class="body-text" data-i18n="anti_desc_p2">
                 Ho contribuito a tutte le fasi del progetto: dalla progettazione in Figma e alla prototipazione, fino
                 alle attività di user testing e al successivo redesign dell’interfaccia. Il lavoro è stato avviato a
                 partire da un’ampia ricerca sulla letteratura e sul tema delle truffe digitali e dell’inclusione
@@ -110,16 +116,18 @@
 
     </main>
 
-    <!-- Contact & Footer -->
-    <footer id="contact" class="footer section-spacing fade-in-up">
+    <!-- Footer -->
+    <footer class="footer section-spacing">
         <div class="container grid-12">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            <div class="footer-content" style="grid-column: 1 / -1; text-align: center; border-top: none;">
+                <p class="copyright" data-i18n="footer_copy">© 2026 Giorgia Mandorino. Engineered with passion.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="lang.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

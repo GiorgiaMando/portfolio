@@ -231,3 +231,55 @@ function initInteractiveCanvas() {
     resizeCanvas();
     animate();
 }
+
+// ========================================== //
+//     LANGUAGE SELECTION LOGIC (IT / EN)         //
+// ========================================== //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnIt = document.getElementById('lang-it');
+    const btnEn = document.getElementById('lang-en');
+
+    // Se i pulsanti non esistono (es. su cartelle vecchie o pagine non aggiornate), ferma l'esecuzione per questa parte.
+    if (!btnIt || !btnEn) return;
+
+    // 1. Controlla lingua salvata in precedenza, o default a 'it'
+    let currentLang = localStorage.getItem('portfolio_lang') || 'it';
+
+    // 2. Funzione per applicare la lingua
+    const setLanguage = (lang) => {
+        currentLang = lang;
+        localStorage.setItem('portfolio_lang', lang);
+
+        // Aggiorna stile bottoni
+        if (lang === 'it') {
+            btnIt.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            btnEn.classList.add('active');
+            btnIt.classList.remove('active');
+        }
+
+        // Recupera le traduzioni (deve esistere la variabile i18nTranslations caricata dal file lang.js)
+        if (typeof window.i18nTranslations === 'undefined') {
+            console.error("lang.js non è stato caricato correttamente.");
+            return;
+        }
+
+        // Sostituisci i testi su tutti gli elementi con l'attributo data-i18n
+        const translatableElements = document.querySelectorAll('[data-i18n]');
+        translatableElements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (window.i18nTranslations[key] && window.i18nTranslations[key][lang]) {
+                el.innerHTML = window.i18nTranslations[key][lang];
+            }
+        });
+    };
+
+    // 3. Esegui subito al caricamento
+    setLanguage(currentLang);
+
+    // 4. Aggiungi gli eventi click ai pulsanti
+    btnIt.addEventListener('click', () => setLanguage('it'));
+    btnEn.addEventListener('click', () => setLanguage('en'));
+});

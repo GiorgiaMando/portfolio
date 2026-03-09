@@ -62,9 +62,14 @@
         <div class="nav-content">
             <div class="logo">Giorgia Mandorino</div>
             <div class="nav-links">
-                <a href="index.html#bio">Bio</a>
-                <a href="index.html#projects">Work</a>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+                <a href="index.html#projects" data-i18n="nav_work">Work</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button id="lang-it" class="lang-btn active">IT</button>
+                    <span class="lang-sep">|</span>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,9 +78,10 @@
     <main class="container">
 
         <header class="project-header fade-in-up delay-2">
-            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
-            <h1>Terra C-137</h1>
-            <p class="subtitle" style="margin-top: var(--space-2);">Progettazione di interfaccia</p>
+            <a href="index.html#projects" class="back-link" data-i18n="back_to_projects">← Torna ai progetti</a>
+            <h1 data-i18n="terra_title">Terra C-137</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);" data-i18n="terra_meta">Progettazione di interfaccia
+            </p>
         </header>
 
         <div class="fade-in-up">
@@ -83,15 +89,16 @@
         </div>
 
         <section class="project-content-area fade-in-up delay-1">
-            <h2>Il Progetto</h2>
-            <p class="body-text" style="margin-bottom: var(--space-6);">
-                Questo progetto è stato realizzato per l'esame di comunicazione visiva e design delle interfacce. Il
-                brief prevedeva la realizzazione di un totem turistico da posizionare in una terra parallela alla
-                nostra. Il totem doveva servire da guida ai turisti presenti su questa terra.
+            <h2 data-i18n="prep_project_h2">Il Progetto</h2>
+            <p class="body-text" style="margin-bottom: var(--space-6);" data-i18n="terra_project_p">
+                Progetto realizzato per l'esame di applicazioni web. Il brief prevedeva la realizzazione tramite l'uso
+                di HTML, CSS e JS di una web application (per tablet o totem interattivo). Nello specifico,
+                l'interfaccia realizzata offre all'utente la possibilità di esplorare l'immaginaria Terra C-137 della
+                serie animata Rick e Morty.
             </p>
 
-            <h2>Il mio contributo</h2>
-            <p class="body-text">
+            <h2 data-i18n="prep_contrib_h2">Il mio contributo</h2>
+            <p class="body-text" data-i18n="terra_contrib_p">
                 In questo progetto ho contribuito alla realizzazione di wireframe e mockup di alcune pagine del sito e
                 allo sviluppo front-end di alcune schermate in JavaScript e CSS.
             </p>
@@ -122,16 +129,18 @@
 
     </main>
 
-    <!-- Contact & Footer -->
-    <footer id="contact" class="footer section-spacing fade-in-up">
+    <!-- Footer -->
+    <footer class="footer section-spacing">
         <div class="container grid-12">
-            <div class="footer-content">
-                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            <div class="footer-content" style="grid-column: 1 / -1; text-align: center; border-top: none;">
+                <p class="copyright" data-i18n="footer_copy">© 2026 Giorgia Mandorino. Engineered with passion.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="lang.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>
