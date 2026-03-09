@@ -166,8 +166,16 @@ a:hover {
 
 .nav-links {
     display: flex;
-    gap: var(--space-6);
+    gap: var(--space-4);
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        gap: var(--space-6);
+    }
 }
 
 .nav-links a {
@@ -189,7 +197,13 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .lang-switch {
+        margin-left: 1rem;
+    }
 }
 
 .lang-btn {
