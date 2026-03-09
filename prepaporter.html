@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prep-à-Porter | Project Details</title>
+
+    <!-- Design System Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: calc(var(--space-16) + 60px);
+            margin-bottom: var(--space-8);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-bottom: var(--space-4);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
+            margin-bottom: var(--space-8);
+        }
+
+        .project-content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 30vh;
+        }
+
+        .project-content-area h2 {
+            margin-bottom: var(--space-4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar fade-in-up delay-1">
+        <div class="nav-content">
+            <div class="logo">Giorgia Mandorino</div>
+            <div class="nav-links">
+                <a href="index.html#bio">Bio</a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Project Content -->
+    <main class="container">
+
+        <header class="project-header fade-in-up delay-2">
+            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
+            <h1>Prep-à-Porter</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);">Prototipo di applicazione mobile</p>
+        </header>
+
+        <div class="fade-in-up">
+            <img src="assets/images/prepaporter.jpg" alt="Prep-à-Porter UI" class="project-hero-image">
+        </div>
+
+        <section class="project-content-area fade-in-up delay-1">
+            <h2>Il Progetto</h2>
+            <p class="body-text" style="margin-bottom: var(--space-6);">
+                Quest'interfaccia è stata realizzata per l'esame di ergonomia cognitiva. Il brief prevedeva di
+                progettare un'applicazione che risolvesse un problema degli studenti. Il nostro obiettivo è stato quello
+                di costruire un'app che potesse aiutare studenti e giovani lavoratori con la gestione dei pasti
+                d'asporto, evitando quindi disorganizzazione che porta a sprechi e perdite di tempo.
+            </p>
+
+            <h2>Il mio contributo</h2>
+            <p class="body-text">
+                In questo progetto il mio contributo è stato utile in diverse fasi del lavoro. Inizialmente ho
+                contribuito alla realizzazione di interviste utili alla comprensione dei reali bisogni del target,
+                successivamente ho progettato l'applicazione su Figma partendo da wireframe low-fidelity fino ad
+                arrivare ai mockup. Successivamente, ho realizzato una serie di user test utili poi al redesign
+                dell'applicazione sulla base dei problemi riscontrati.
+            </p>
+        </section>
+
+        <!-- Sezione Gallery Orizzontale -->
+        <section class="fade-in-up delay-2" style="margin-top: var(--space-8);">
+            <div class="horizontal-scroll-container">
+                <img src="assets/images/ricette1.jpg" alt="Schermata Ricette 1">
+                <img src="assets/images/ricette2.jpg" alt="Schermata Ricette 2">
+                <img src="assets/images/ricette3.jpg" alt="Schermata Ricette 3">
+                <img src="assets/images/ricette4.jpg" alt="Schermata Ricette 4">
+                <img src="assets/images/ricette5.jpg" alt="Schermata Ricette 5">
+                <img src="assets/images/ricette6.jpg" alt="Schermata Ricette 6">
+                <img src="assets/images/ricette7.jpg" alt="Schermata Ricette 7">
+                <img src="assets/images/ricette8.jpg" alt="Schermata Ricette 8">
+                <img src="assets/images/ricette9.jpg" alt="Schermata Ricette 9">
+                <img src="assets/images/ricette10.jpg" alt="Schermata Ricette 10">
+                <img src="assets/images/ricette11.jpg" alt="Schermata Ricette 11">
+                <img src="assets/images/ricette12.jpg" alt="Schermata Ricette 12">
+                <img src="assets/images/ricette13.jpg" alt="Schermata Ricette 13">
+                <img src="assets/images/ricette14.jpg" alt="Schermata Ricette 14">
+                <img src="assets/images/ricette15.jpg" alt="Schermata Ricette 15">
+            </div>
+
+            <!-- Sezione Testo Segnaposto -->
+            <div class="project-content-area" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+                <h2>Approfondimenti UX/UI</h2>
+                <p class="body-text">
+                    Vi presento una seconda versione dell'applicazione, scartata nelle prime fasi di prototipazione in
+                    quanto non utilizzabile durante la fase di test. In questo caso, la fase di testing del prototipo è
+                    stata svolta stampando su carta le varie schermate e i colori di questa versione del prototipo non
+                    ci garantivano la corretta visualizzazione della stampa, per cui, per rispettare le norme WCAG,
+                    si è deciso di utilizzare i colori e il design presente nella versione del prototipo definitiva,
+                    presentata all'inizio.
+                </p>
+            </div>
+
+            <!-- Sezione Gallery Orizzontale Secondaria -->
+            <div class="horizontal-scroll-container">
+                <img src="assets/images/ricetteno1.jpg" alt="Schermata Alternativa 1">
+                <img src="assets/images/ricetteno2.jpg" alt="Schermata Alternativa 2">
+                <img src="assets/images/ricetteno3.png" alt="Schermata Alternativa 3">
+                <img src="assets/images/ricetteno4.jpg" alt="Schermata Alternativa 4">
+                <img src="assets/images/ricetteno5.jpg" alt="Schermata Alternativa 5">
+                <img src="assets/images/ricetteno6.jpg" alt="Schermata Alternativa 6">
+                <img src="assets/images/ricetteno7.jpg" alt="Schermata Alternativa 7">
+                <img src="assets/images/ricetteno8.jpg" alt="Schermata Alternativa 8">
+                <img src="assets/images/ricetteno9.jpg" alt="Schermata Alternativa 9">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="footer section-spacing fade-in-up">
+        <div class="container grid-12">
+            <div class="footer-content">
+                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

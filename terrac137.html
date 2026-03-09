@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra C-137 | Project Details</title>
+
+    <!-- Design System Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: calc(var(--space-16) + 60px);
+            margin-bottom: var(--space-8);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-bottom: var(--space-4);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
+            margin-bottom: var(--space-8);
+        }
+
+        .project-content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 30vh;
+        }
+
+        .project-content-area h2 {
+            margin-bottom: var(--space-4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar fade-in-up delay-1">
+        <div class="nav-content">
+            <div class="logo">Giorgia Mandorino</div>
+            <div class="nav-links">
+                <a href="index.html#bio">Bio</a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Project Content -->
+    <main class="container">
+
+        <header class="project-header fade-in-up delay-2">
+            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
+            <h1>Terra C-137</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);">Progettazione di interfaccia</p>
+        </header>
+
+        <div class="fade-in-up">
+            <img src="assets/images/terrac137.jpg" alt="Terra C-137 UI" class="project-hero-image">
+        </div>
+
+        <section class="project-content-area fade-in-up delay-1">
+            <h2>Il Progetto</h2>
+            <p class="body-text" style="margin-bottom: var(--space-6);">
+                Questo progetto è stato realizzato per l'esame di comunicazione visiva e design delle interfacce. Il
+                brief prevedeva la realizzazione di un totem turistico da posizionare in una terra parallela alla
+                nostra. Il totem doveva servire da guida ai turisti presenti su questa terra.
+            </p>
+
+            <h2>Il mio contributo</h2>
+            <p class="body-text">
+                In questo progetto ho contribuito alla realizzazione di wireframe e mockup di alcune pagine del sito e
+                allo sviluppo front-end di alcune schermate in JavaScript e CSS.
+            </p>
+        </section>
+
+        <!-- Sezione Gallery Orizzontale -->
+        <section class="fade-in-up delay-2" style="margin-top: var(--space-8); margin-bottom: var(--space-8);">
+            <div class="horizontal-scroll-container">
+                <img src="assets/images/terra1.jpg" alt="Schermata Terra C-137 1">
+                <img src="assets/images/terra2.jpg" alt="Schermata Terra C-137 2">
+                <img src="assets/images/terra3.jpg" alt="Schermata Terra C-137 3">
+                <img src="assets/images/terra4.jpg" alt="Schermata Terra C-137 4">
+                <img src="assets/images/terra5.jpg" alt="Schermata Terra C-137 5">
+                <img src="assets/images/terra6.jpg" alt="Schermata Terra C-137 6">
+                <img src="assets/images/terra7.jpg" alt="Schermata Terra C-137 7">
+                <img src="assets/images/terra8.jpg" alt="Schermata Terra C-137 8">
+                <img src="assets/images/terra9.jpg" alt="Schermata Terra C-137 9">
+                <img src="assets/images/terra10.jpg" alt="Schermata Terra C-137 10">
+                <img src="assets/images/terra11.jpg" alt="Schermata Terra C-137 11">
+                <img src="assets/images/terra12.jpg" alt="Schermata Terra C-137 12">
+                <img src="assets/images/terra13.jpg" alt="Schermata Terra C-137 13">
+                <img src="assets/images/terra14.jpg" alt="Schermata Terra C-137 14">
+                <img src="assets/images/terra15.jpg" alt="Schermata Terra C-137 15">
+                <img src="assets/images/terra16.jpg" alt="Schermata Terra C-137 16">
+                <img src="assets/images/terra17.jpg" alt="Schermata Terra C-137 17">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="footer section-spacing fade-in-up">
+        <div class="container grid-12">
+            <div class="footer-content">
+                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

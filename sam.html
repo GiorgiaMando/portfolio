@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM | Project Details</title>
+
+    <!-- Design System Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: calc(var(--space-16) + 60px);
+            margin-bottom: var(--space-8);
+            border-bottom: var(--border-width) solid var(--border-color);
+            padding-bottom: var(--space-6);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-bottom: var(--space-4);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 50vh;
+        }
+
+        .project-content-area h2 {
+            margin-bottom: var(--space-4);
+        }
+
+        .project-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
+            margin-bottom: var(--space-8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar fade-in-up delay-1">
+        <div class="nav-content">
+            <div class="logo">Giorgia Mandorino</div>
+            <div class="nav-links">
+                <a href="index.html#bio">Bio</a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Project Content -->
+    <main class="container">
+
+        <header class="project-header fade-in-up delay-2">
+            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
+            <h1>SAM - UX Research</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);">Qualità dell'interazione e soddisfazione dell'utente
+                negli agenti conversazionali.</p>
+        </header>
+
+        <div class="fade-in-up">
+            <img src="assets/images/SAM.jpg" alt="SAM UX Research Project Image" class="project-hero-image">
+        </div>
+
+        <section class="project-content-area section-spacing fade-in-up">
+            <h2>Dettagli dello Studio</h2>
+            <p class="body-text">
+                Progetto di ricerca sugli agenti conversazionali e sulla qualità delle risposte generate dall’AI. Il
+                lavoro analizza il caso di STEP FuturAbility District, attraverso lo studio dell’agente conversazionale
+                SAM, valutando la qualità delle risposte e la relazione con la soddisfazione degli utenti. La ricerca
+                combina analisi teorica e studio empirico su dati reali di interazione, utilizzando metriche qualitative
+                e indicatori di customer satisfaction per comprendere come le performance del sistema influenzino
+                l’esperienza degli utenti.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="footer section-spacing fade-in-up">
+        <div class="container grid-12">
+            <div class="footer-content">
+                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

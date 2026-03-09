@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiTruffApp | Project Details</title>
+
+    <!-- Design System Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: calc(var(--space-16) + 60px);
+            margin-bottom: var(--space-8);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-bottom: var(--space-4);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
+            margin-bottom: var(--space-8);
+        }
+
+        .project-content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 30vh;
+        }
+
+        .project-content-area h2 {
+            margin-bottom: var(--space-4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar fade-in-up delay-1">
+        <div class="nav-content">
+            <div class="logo">Giorgia Mandorino</div>
+            <div class="nav-links">
+                <a href="index.html#bio">Bio</a>
+                <a href="index.html#projects">Work</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Project Content -->
+    <main class="container">
+
+        <header class="project-header fade-in-up delay-2">
+            <a href="index.html#projects" class="back-link">← Torna ai progetti</a>
+            <h1>AntiTruffApp</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);">Prototipo di applicazione educativa per anziani</p>
+        </header>
+
+        <div class="fade-in-up">
+            <img src="assets/images/antitruffapp.jpg" alt="AntiTruffApp UI" class="project-hero-image">
+        </div>
+
+        <section class="project-content-area fade-in-up delay-1">
+            <h2>Descrizione</h2>
+            <p class="body-text">
+                In questo progetto di interaction design il brief prevedeva la progettazione di un’applicazione rivolta
+                a un pubblico over 60. La soluzione sviluppata è un’app educativa pensata per aiutare le fasce di
+                popolazione più vulnerabili a riconoscere ed evitare le truffe online, con contenuti informativi e
+                strumenti di supporto alla prevenzione.
+            </p>
+            <p class="body-text">
+                Ho contribuito a tutte le fasi del progetto: dalla progettazione in Figma e alla prototipazione, fino
+                alle attività di user testing e al successivo redesign dell’interfaccia. Il lavoro è stato avviato a
+                partire da un’ampia ricerca sulla letteratura e sul tema delle truffe digitali e dell’inclusione
+                tecnologica.
+            </p>
+
+            <!-- Sezione Video -->
+            <div class="video-container"
+                style="max-width: 250px; margin: var(--space-8) auto; border-radius: var(--border-radius); overflow: hidden; border: var(--border-width) solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <video autoplay loop muted playsinline
+                    style="width: 100%; height: auto; display: block; object-fit: contain;">
+                    <source src="assets/video/antitruffa.mov" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="footer section-spacing fade-in-up">
+        <div class="container grid-12">
+            <div class="footer-content">
+                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

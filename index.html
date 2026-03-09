@@ -32,11 +32,17 @@
 
     <!-- Hero Section -->
     <header class="hero section-spacing fade-in-up delay-2">
-        <div class="container grid-12">
+        <div class="hero-graphic" id="interactive-canvas-container">
+            <canvas id="interactive-canvas"></canvas>
+        </div>
+
+        <div class="container grid-12 relative-z">
             <div class="hero-content">
-                <h1>Elevating web design through <span class="accent">technical rigor</span> & communication science.
-                </h1>
-                <p class="subtitle">Digital-Artisan · High-End Tech · Architectural</p>
+                <div class="hero-text">
+                    <h1><span class="accent">Web Designer <br> & Front-End Developer</span></h1>
+                    <p class="subtitle">UX Research · Figma · Javascript · React.js · Antigravity · CSS · Bootstrap ·
+                        HTML · Usability Test · A/B Test</p>
+                </div>
             </div>
         </div>
     </header>
@@ -49,13 +55,19 @@
             </div>
             <div class="bio-content">
                 <p class="body-text">
-                    Il design non è solo estetica, è ingegneria della comunicazione. Trasmetto un senso di "ordine
-                    superiore" e precisione millimetrica in ogni progetto. Unendo la pulizia del design svizzero con la
-                    forza del digitale.
+                    Mi chiamo Giorgia e ho 25 anni, ho appena concluso la laurea magistrale in Teoria e Tecnologia della
+                    Comunicazione, dove ho approfondito il mondo digitale, con un focus particolare sul Web Design e il
+                    Front-End Development, integrando competenze teoriche e tecniche.
                 </p>
-                <p class="body-text light-text">
-                    Esperienza focalizzata su micro-interazioni fluide che guidano l'utente senza distrarlo, basata su
-                    un rigore matematico e allineamenti perfetti.
+                <p class="body-text">
+                    Anche dopo la conclusione degli studi, continuo a formarmi e ad aggiornarmi costantemente, spinta
+                    dalla curiosità e dal voler rafforzare le mie competenze.
+                </p>
+                <p class="body-text">
+                    Mi muovo tra comunicazione, design e tecnologia con uno sguardo attento all’esperienza delle
+                    persone. Sono curiosa, creativa e orientata alla crescita continua. L’interesse per l’arte e il
+                    design guida il mio modo di osservare e progettare, mentre l’attenzione ai dettagli mi porta a
+                    lavorare con cura, ascolto e responsabilità verso le esigenze degli altri.
                 </p>
             </div>
         </div>
@@ -71,70 +83,82 @@
             <div class="bento-grid full-width">
                 <!-- Project 1 (Large) -->
                 <article class="bento-item box-large has-image-placeholder">
-                    <!-- Placeholder per l'immagine (da sostituire con tag img src="..." in futuro) -->
-                    <div class="image-layer"></div>
+                    <div class="image-layer">
+                        <img src="assets/images/SAM.jpg" alt="SAM project" class="project-image">
+                    </div>
                     <div class="project-info">
                         <h3>Qualità dell'interazione e soddisfazione dell'utente negli agenti conversazionali: il caso
                             studio dell'agente SAM presso STEP FuturAbility District</h3>
                         <p class="meta">UX Research · 2026</p>
                         <!-- Spazio per un piccolo testo esplicativo futuro -->
-                        <p class="project-excerpt">Inserire qui una breve descrizione del progetto e dei risultati di
-                            ricerca ottenuti.</p>
+                        <p class="project-excerpt">Analisi qualitativa delle performance di questo agente AI con
+                            successiva analisi correlazionale rispetto al CSAT.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary">Vedi caso studio</a>
+                        <a href="sam.html" class="btn-primary">Vedi caso studio</a>
                     </div>
                 </article>
 
                 <!-- Project 2 (Small) - Posizionato qui per incastrarsi nella griglia a fianco del box-large -->
                 <article class="bento-item box-small has-image-placeholder">
-                    <div class="image-layer"></div>
+                    <div class="image-layer">
+                        <img src="assets/images/prepaporter.jpg" alt="Prep-à-Porter project" class="project-image">
+                    </div>
                     <div class="project-info">
                         <h3>Prep-à-Porter</h3>
                         <p class="meta">Prototipo di applicazione · 2025</p>
-                        <p class="project-excerpt">Breve testo esplicativo del prototipo.</p>
+                        <p class="project-excerpt">Applicazione mobile utile a studenti e lavoratori per
+                            organizzare pasti e spesa in modo semplice ed efficace.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary">esplora documenti</a>
+                        <a href="prepaporter.html" class="btn-primary">esplora documenti</a>
                     </div>
                 </article>
 
                 <!-- Project 3 (Small) - Si incastra sotto il primo small, sempre a fianco del large -->
                 <article class="bento-item box-small has-image-placeholder">
-                    <div class="image-layer"></div>
+                    <div class="image-layer">
+                        <img src="assets/images/terrac137.jpg" alt="Terra C-137 project" class="project-image">
+                    </div>
                     <div class="project-info">
                         <h3>Terra C-137</h3>
                         <p class="meta">Progettazione di interfaccia · 2025</p>
-                        <p class="project-excerpt">Breve testo esplicativo dell'interfaccia.</p>
+                        <p class="project-excerpt">Web app di un totem turistico relativo ad una terra immaginaria.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary">esplora documenti</a>
+                        <a href="terrac137.html" class="btn-primary">esplora documenti</a>
                     </div>
                 </article>
 
                 <!-- Project 4 (Medium) - Nuova riga, occupa 2 colonne -->
                 <article class="bento-item box-medium has-image-placeholder">
-                    <div class="image-layer"></div>
+                    <div class="image-layer">
+                        <img src="assets/images/antitruffapp.jpg" alt="AntiTruffApp project" class="project-image">
+                    </div>
                     <div class="project-info">
                         <h3>AntiTruffApp</h3>
                         <p class="meta">Prototipo di applicazione · 2025</p>
-                        <p class="project-excerpt">Breve testo esplicativo per documentare l'app anti-truffa.</p>
+                        <p class="project-excerpt">Prototipo di applicazione educativa per aiutare le persone anziane a
+                            riconoscere truffe e frodi online, promuovendo autonomia e sicurezza digitale.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary">esplora documenti</a>
+                        <a href="antitruffapp.html" class="btn-primary">esplora documenti</a>
                     </div>
                 </article>
 
                 <!-- Project 5 (Small) - Si incastra affianco al medium nell'ultima riga -->
                 <article class="bento-item box-small has-image-placeholder">
-                    <div class="image-layer"></div>
+                    <div class="image-layer">
+                        <img src="assets/images/varmblixt.jpg" alt="Varmblixt project" class="project-image">
+                    </div>
                     <div class="project-info">
                         <h3>Varmblixt</h3>
                         <p class="meta">Progettazione di un interfaccia · 2024</p>
-                        <p class="project-excerpt">Breve testo esplicativo del design Varmblixt.</p>
+                        <p class="project-excerpt">Realizzazione di un sito web con Wordpress per promuovere un prodotto
+                            a scelta dal catalogo Ikea.</p>
                     </div>
                     <div class="project-overlay">
-                        <a href="#" class="btn-primary">esplora documenti</a>
+                        <a href="varmblixt.html" class="btn-primary">esplora documenti</a>
                     </div>
                 </article>
             </div>
@@ -144,15 +168,32 @@
     <!-- Contact & Footer -->
     <footer id="contact" class="footer section-spacing fade-in-up">
         <div class="container grid-12">
-            <div class="footer-content">
-                <h2>Let's build something <span class="accent">precise.</span></h2>
-                <a href="mailto:hello@example.com" class="email-link">hello@example.com</a>
-                <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Dribbble</a>
+            <div class="footer-content" style="gap: var(--space-4);">
+                <div class="social-links-icons"
+                    style="display: flex; gap: var(--space-4); justify-content: center; align-items: center;">
+                    <!-- Email Icon -->
+                    <a href="mailto:giorgiamandorino.gm@gmail.com" aria-label="Invia un'email" class="icon-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+
+                    <!-- LinkedIn Icon -->
+                    <a href="https://www.linkedin.com/in/giorgia-mandorino-a1a288243/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Profilo LinkedIn" class="icon-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
                 </div>
-                <p class="copyright">© 2024 Giorgia Mandorino. Engineered with precision.</p>
+                <p class="copyright">© 2026 Giorgia Mandorino. Engineered with passion.</p>
             </div>
         </div>
     </footer>

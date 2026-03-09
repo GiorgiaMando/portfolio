@@ -177,23 +177,67 @@ a:hover {
 
 /* Hero */
 .hero {
-    min-height: 80vh;
+    min-height: 95vh;
+    /* Aumentato da 80vh a 95vh */
     display: flex;
     align-items: center;
     border-bottom: var(--border-width) solid var(--border-color);
-    padding-top: calc(var(--space-16) + 60px);
-    /* Offset per navbar */
+    padding-top: calc(var(--space-16) + 100px);
+    /* Aumentato anche il padding superiore e offset */
+    padding-bottom: var(--space-16);
+    /* Aggiunta spaziatura in fondo alla flexbox */
+    position: relative;
+    overflow: hidden;
+    /* Nascondiamo la grafica se esce */
+}
+
+.relative-z {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    /* Lascia passare gli eventi del mouse al canvas sotto */
+}
+
+/* Riattiva il pointer event solo per i link/testi se necessario */
+.relative-z * {
+    pointer-events: auto;
 }
 
 .hero-content {
     grid-column: 1 / -1;
-    /* Mobile: full width */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
 }
 
 @media (min-width: 768px) {
     .hero-content {
-        grid-column: 1 / 11;
+        /* Torna a occupare tutto lo spazio in larghezza se il canvas è dietro */
+        grid-template-columns: 1fr;
     }
+}
+
+.hero-text {
+    z-index: 2;
+}
+
+.hero-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Opzionale: sfuma i bordi se vuoi che il canvas svanisca un po' ai bordi */
+}
+
+#interactive-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* rimuove margini inferiori fastidiosi */
+    outline: none;
 }
 
 .subtitle {
@@ -203,6 +247,12 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-body);
+}
+
+@media (min-width: 1024px) {
+    .subtitle {
+        white-space: nowrap;
+    }
 }
 
 /* Bio Section */
@@ -293,12 +343,17 @@ a:hover {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, rgba(8, 8, 8, 0.95) 80%),
-        repeating-linear-gradient(45deg, #0d0d0d, #0d0d0d 10px, #121212 10px, #121212 20px);
-    opacity: 0.6;
-    transition: opacity var(--transition-duration) var(--transition-curve),
-        transform calc(var(--transition-duration)*2) var(--transition-curve);
     overflow: hidden;
+    transition: transform calc(var(--transition-duration)*2) var(--transition-curve);
+}
+
+/* Dark gradient at the bottom for text readability */
+.image-layer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 30%, rgba(8, 8, 8, 0.95) 100%);
+    pointer-events: none;
 }
 
 /* Base style for actual images when added */
@@ -307,14 +362,16 @@ a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    mix-blend-mode: overlay;
-    /* Helps blending with the dark theme */
     background-color: var(--bg-color);
+    transition: opacity var(--transition-duration) var(--transition-curve);
 }
 
 .bento-item:hover .image-layer {
-    opacity: 0.3;
     transform: scale(1.05);
+}
+
+.bento-item:hover .project-image {
+    opacity: 0.8;
 }
 
 /* Typography tweaks for inner content */
@@ -387,11 +444,12 @@ a:hover {
 }
 
 .email-link {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
     font-family: var(--font-primary);
     font-weight: 700;
     color: var(--text-primary);
     border-bottom: 2px solid transparent;
+    word-break: break-all;
 }
 
 .email-link:hover {
@@ -399,16 +457,16 @@ a:hover {
     border-bottom-color: var(--accent);
 }
 
-.social-links {
-    display: flex;
-    gap: var(--space-4);
+.icon-link {
+    color: var(--text-primary);
+    transition: color var(--transition-duration) var(--transition-curve),
+        transform var(--transition-duration) var(--transition-curve);
+    display: inline-flex;
 }
 
-.social-links a {
-    font-family: var(--font-primary);
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
+.icon-link:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
 }
 
 .copyright {
@@ -437,4 +495,84 @@ a:hover {
 
 .delay-2 {
     transition-delay: 0.2s;
+}
+
+/* ==========================================================================
+   Gallery System (Project Details)
+   ========================================================================== */
+
+/* Horizontal Scroll Container */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--space-4);
+    padding-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--border-color);
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent);
+}
+
+.horizontal-scroll-container img {
+    height: 60vh;
+    min-height: 400px;
+    width: auto;
+    border-radius: var(--border-radius);
+    object-fit: contain;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border: var(--border-width) solid var(--border-color);
+    background-color: #000000;
+}
+
+/* Grid Gallery Container */
+.grid-gallery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+    .grid-gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid-gallery-container img {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    border-radius: var(--border-radius);
+    object-fit: contain;
+    border: var(--border-width) solid var(--border-color);
+    transition: transform var(--transition-duration) var(--transition-curve);
+}
+
+.grid-gallery-container img:hover {
+    transform: scale(1.02);
 }
