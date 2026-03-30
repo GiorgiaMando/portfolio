@@ -25,8 +25,8 @@ const translations = {
 
     // --- BIO SECTION ---
     "bio_title": {
-        "it": "01. Identità",
-        "en": "01. Identity"
+        "it": "01. Chi sono",
+        "en": "01. About me"
     },
     "bio_p1": {
         "it": "Mi chiamo Giorgia e ho 25 anni, ho appena concluso la laurea magistrale in Teoria e Tecnologia della Comunicazione, dove ho approfondito il mondo digitale, con un focus particolare sul Web Design e il Front-End Development, integrando competenze teoriche e tecniche.",
@@ -43,12 +43,46 @@ const translations = {
 
     // --- PROJECTS SECTION ---
     "projects_title": {
-        "it": "02. Lavori Selezionati",
-        "en": "02. Selected Works"
+        "it": "02. Progetti",
+        "en": "02. Projects"
     },
     "back_to_projects": {
         "it": "← Torna ai progetti",
         "en": "← Back to projects"
+    },
+
+    // SPYRAL FEST
+    "spyral_title": {
+        "it": "Spyral Fest",
+        "en": "Spyral Fest"
+    },
+    "spyral_meta": {
+        "it": "Sviluppo Web · 2026",
+        "en": "Web Development · 2026"
+    },
+    "spyral_excerpt": {
+        "it": "Progettazione e sviluppo della landing page per lo Spyral Fest, un festival di musica elettronica.",
+        "en": "Design and development of the landing page for Spyral Fest, an electronic music festival."
+    },
+    "spyral_meta_mobile": {
+        "it": "Sviluppo Web",
+        "en": "Web Development"
+    },
+    "spyral_project_h2": {
+        "it": "Il Progetto",
+        "en": "The Project"
+    },
+    "spyral_project_p": {
+        "it": "Progettazione e sviluppo di una landing page immersiva per lo Spyral Fest, un festival di musica elettronica. L'obiettivo era trasmettere l'energia dell'evento attraverso un'interfaccia ad alto impatto visivo, ricorrendo a pratiche di sviluppo web moderne e mobile-first. Puoi esplorare la landing page al link: <a href=\"https://spyralfest.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"accent\">spyralfest.com</a>",
+        "en": "Design and development of an immersive landing page for Spyral Fest, an electronic music festival. The goal was to convey the energy of the event through a high-impact interface, employing modern and mobile-first web development practices. You can explore the live landing page at: <a href=\"https://spyralfest.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"accent\">spyralfest.com</a>"
+    },
+    "spyral_contrib_h2": {
+        "it": "Il mio contributo",
+        "en": "My Contribution"
+    },
+    "spyral_contrib_p": {
+        "it": "Ho curato interamente la progettazione dell'interfaccia utente (UI) e lo sviluppo Front-End, lavorando sulla struttura semantica in HTML e sui fogli di stile CSS. Ho anche implementato elementi interattivi in JavaScript per rendere la navigazione sul sito fluida e coinvolgente per tutti gli utenti.",
+        "en": "I was entirely responsible for the User Interface (UI) design and Front-End development, working on the semantic HTML structure and CSS stylesheets. I also implemented interactive elements in JavaScript to make navigation smooth and engaging for all users."
     },
 
     // SAM

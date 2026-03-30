@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spyral Fest | Project Details</title>
+
+    <!-- Design System Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-header {
+            margin-top: calc(var(--space-16) + 60px);
+            margin-bottom: var(--space-8);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            margin-bottom: var(--space-4);
+            font-family: var(--font-primary);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
+            margin-bottom: var(--space-8);
+            background-color: var(--bg-color);
+        }
+
+        .project-content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            min-height: 30vh;
+        }
+
+        .project-content-area h2 {
+            margin-bottom: var(--space-4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar fade-in-up delay-1">
+        <div class="nav-content">
+            <div class="logo">Giorgia Mandorino</div>
+            <div class="nav-links">
+                <a href="index.html#bio" data-i18n="nav_bio">Bio</a>
+                <a href="index.html#projects" data-i18n="nav_work">Work</a>
+                <a href="index.html#contact" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button id="lang-it" class="lang-btn active">IT</button>
+                    <span class="lang-sep">|</span>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Project Content -->
+    <main class="container">
+
+        <header class="project-header fade-in-up delay-2">
+            <a href="index.html#projects" class="back-link" data-i18n="back_to_projects">← Torna ai progetti</a>
+            <h1 data-i18n="spyral_title">Spyral Fest</h1>
+            <p class="subtitle" style="margin-top: var(--space-2);" data-i18n="spyral_meta_mobile">Sviluppo Web</p>
+        </header>
+
+        <div class="fade-in-up">
+            <img src="assets/images/spyral.png" alt="Spyral Fest project" class="project-hero-image">
+        </div>
+
+        <section class="project-content-area fade-in-up delay-1">
+            <h2 data-i18n="spyral_project_h2">Il Progetto</h2>
+            <p class="body-text" style="margin-bottom: var(--space-6);" data-i18n="spyral_project_p">
+                Progettazione e sviluppo di una landing page immersiva per lo Spyral Fest, un festival di musica elettronica. L'obiettivo era trasmettere l'energia dell'evento attraverso un'interfaccia ad alto impatto visivo, ricorrendo a pratiche di sviluppo web moderne e mobile-first.
+            </p>
+
+            <h2 data-i18n="spyral_contrib_h2">Il mio contributo</h2>
+            <p class="body-text" data-i18n="spyral_contrib_p">
+                Ho curato interamente la progettazione dell'interfaccia utente (UI) e lo sviluppo Front-End, lavorando sulla struttura semantica in HTML e sui fogli di stile CSS. Ho anche implementato elementi interattivi in JavaScript per rendere la navigazione sul sito fluida e coinvolgente per tutti gli utenti.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-spacing">
+        <div class="container grid-12">
+            <div class="footer-content" style="grid-column: 1 / -1; text-align: center; border-top: none;">
+                <p class="copyright" data-i18n="footer_copy">© 2026 Giorgia Mandorino. Engineered with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="lang.js?v=2"></script>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
